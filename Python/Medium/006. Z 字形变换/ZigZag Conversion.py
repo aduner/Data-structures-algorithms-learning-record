@@ -12,7 +12,4 @@ class Solution:
             if row == 0 or row == numRows-1:
                 n *= -1
             row += n
-        result=''
-        for i in temp:
-            result+=''.join(i)
-        return result
+        return ''.join(temp)
