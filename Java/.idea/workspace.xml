@@ -35,6 +35,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Confirmation" />
   </component>
   <component name="RunManager">
     <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -78,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610970487899</updated>
       <workItem from="1610970489298" duration="1490000" />
-      <workItem from="1611237501067" duration="1243000" />
+      <workItem from="1611237501067" duration="4469000" />
     </task>
     <servers />
   </component>
