@@ -4,7 +4,7 @@ Link: https://leetcode-cn.com/problems/longest-common-prefix/
 
 #### 常规方法：
 
-- 取出最小的字符串和最大字符串
+- 取出最小的字符串
 - 遍历判断公共前缀，返回最长结果
 
 #### zip方法：
