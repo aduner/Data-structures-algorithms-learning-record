@@ -1,8 +1,10 @@
 package JOffer.J07_重建二叉树;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+/**
+ * 递归法
+ */
 public class Solution {
     private Map<Integer, Integer> indexMap;
 
@@ -39,4 +41,34 @@ public class Solution {
     }
 }
 
+/**
+ * 迭代法
+ */
+class Solution2 {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
 
+        if (preorder == null || preorder.length == 0) {
+            return null;
+        }
+        TreeNode root = new TreeNode(preorder[0]);
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.push(root);
+        int index = 0;
+        for (int i = 1; i < preorder.length; i++) {
+            int preorderVal = preorder[i];
+            TreeNode node = stack.peek();
+            if (node.val != inorder[index]) {
+                node.left = new TreeNode(preorderVal);
+                stack.push(node.left);
+            } else {
+                while (!stack.isEmpty() && stack.peek().val == inorder[index]) {
+                    node = stack.pop();
+                    index++;
+                }
+                node.right = new TreeNode(preorderVal);
+                stack.push(node.right);
+            }
+        }
+        return root;
+    }
+}
