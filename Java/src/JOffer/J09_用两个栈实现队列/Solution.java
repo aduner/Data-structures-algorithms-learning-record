@@ -1,4 +1,4 @@
-package JOffer.J08_用两个栈实现队列;
+package JOffer.J09_用两个栈实现队列;
 
 import java.util.LinkedList;
 
