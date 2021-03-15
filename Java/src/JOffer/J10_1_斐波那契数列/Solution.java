@@ -1,4 +1,4 @@
-package JOffer.J10_斐波那契数列;
+package JOffer.J10_1_斐波那契数列;
 
 import java.util.HashMap;
 import java.util.Map;
