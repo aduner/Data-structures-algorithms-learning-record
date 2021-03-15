@@ -9,8 +9,8 @@ public class Solution {
         while (left<right){
             int index=(right+left)/2;
             int v=numbers[index];
-            if (v<numbers[left]) left=index+1;
-            else if (v>numbers[right]) right=index;
+            if (v<numbers[left]) right=index+1;
+            else if (v>numbers[right]) left=index;
             else right--;
         }
         return numbers[left];
