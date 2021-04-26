@@ -1,9 +1,6 @@
 class Solution:
     # 快速排序
     def quick_sort(self, nums, left, right):
-        def swap(nums, i, j):
-            nums[i], nums[j] = nums[j], nums[i]
-
         def partition(nums, left, right):
             pivot = left
             while left < right:
@@ -11,13 +8,12 @@ class Solution:
                     right -= 1
                 while left < right and nums[left] <= nums[pivot]:
                     left += 1
-                swap(nums, left, right)
-            swap(nums, pivot, left)
+                nums[left], nums[right] = nums[right], nums[left]
+            nums[pivot], nums[left] = nums[left], nums[pivot]
             return left
 
         if left < right:  # 快速排序的递归终止条件
             index = partition(nums, left, right)
-            # print(nums)
             self.quick_sort(nums, left, index-1)
             self.quick_sort(nums, index+1, right)
 
