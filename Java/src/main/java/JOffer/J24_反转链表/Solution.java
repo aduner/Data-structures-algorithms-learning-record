@@ -1,4 +1,4 @@
-package JOffer.J23_反转链表;
+package JOffer.J24_反转链表;
 
 /**
  * @author Aduner

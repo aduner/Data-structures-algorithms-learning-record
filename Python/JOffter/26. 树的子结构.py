@@ -40,8 +40,6 @@ class Solution:
         return False
 
     def include(self, A, B):
-        if B.val == None:
-            return True
         q_a = [A]
         q_b = [B]
         while q_b and q_a:

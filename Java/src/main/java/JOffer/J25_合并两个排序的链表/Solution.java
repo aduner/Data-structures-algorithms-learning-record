@@ -1,4 +1,4 @@
-package JOffer.J24_合并两个排序的链表;
+package JOffer.J25_合并两个排序的链表;
 
 /**
  * @author Aduner

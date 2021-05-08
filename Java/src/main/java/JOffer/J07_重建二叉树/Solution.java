@@ -39,6 +39,15 @@ public class Solution {
         }
         return myBuildTree(preorder, inorder, 0, n - 1, 0, n - 1);
     }
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
+    }
 }
 
 /**
@@ -70,5 +79,14 @@ class Solution2 {
             }
         }
         return root;
+    }
+    class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 }
