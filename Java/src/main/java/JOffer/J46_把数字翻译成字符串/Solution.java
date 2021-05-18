@@ -1,4 +1,4 @@
-package JOffer.J45_把数组排成最小的数.J46_;
+package JOffer.J46_把数字翻译成字符串;
 
 /**
  * @author Aduner
