@@ -37,7 +37,6 @@ public class Solution {
                 left++;
             }
         }
-
         return res.toArray(new int[res.size()][]);
     }
 
