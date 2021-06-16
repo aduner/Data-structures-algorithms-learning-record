@@ -8,10 +8,10 @@ import java.util.Arrays;
  */
 public class Solution {
     public int lastRemaining(int n, int m) {
-        int f = 0;
+        int result = 0;
         for (int i = 2; i != n + 1; ++i) {
-            f = (m + f) % i;
+            result = (m + result) % i;
         }
-        return f;
+        return result;
     }
 }
