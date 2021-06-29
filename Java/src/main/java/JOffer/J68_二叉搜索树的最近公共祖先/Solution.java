@@ -20,7 +20,8 @@ public class Solution {
             else if (root.val > q.val)
                 // 遍历至左子节点
                 root = root.left;
-            else break;
+            else
+                break;
         }
         return root;
     }
