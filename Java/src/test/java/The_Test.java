@@ -171,6 +171,13 @@ public class The_Test {
         oin.close();
         System.out.println(newPerson);
     }
+    @Test
+    void temp12(){
+        int a=1;
+        while (a<10){
+            a=a<<1;
+        System.out.println(a);}
+    }
 }
 class TClass{
     String s1;

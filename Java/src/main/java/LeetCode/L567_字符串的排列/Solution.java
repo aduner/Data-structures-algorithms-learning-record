@@ -1,4 +1,4 @@
-package L567_字符串的排列;
+package LeetCode.L567_字符串的排列;
 
 import java.util.Arrays;
 
