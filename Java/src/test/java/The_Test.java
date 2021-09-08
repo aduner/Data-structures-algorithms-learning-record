@@ -171,15 +171,65 @@ public class The_Test {
         oin.close();
         System.out.println(newPerson);
     }
+
     @Test
-    void temp12(){
-        int a=1;
-        while (a<10){
-            a=a<<1;
-        System.out.println(a);}
+    void temp12() {
+        int a = 1;
+        while (a < 10) {
+            a = a << 1;
+            System.out.println(a);
+        }
+    }
+
+    @Test
+    void temp13() {
+        String a = "a";
+        String b = "b";
+        String c = "a" + "b";
+        String d = a + b;
+        System.out.println(c.equals(d));
+        System.out.println(c == d);
+    }
+    @Test
+    void temp14(){
+        int a=128+1;
+        Integer b=128+1;
+        Long c=1L+1L;
+        System.out.println(b.equals(a));
+        System.out.println(b.equals(c));
+        System.out.println(a == b);
+    }
+    @Test
+    void temp15(){
+        System.out.println(formatString("A%sC%sE", 7, new char[]{'B', 'D', 'F'}));
+    }
+
+    public String formatString(String A, int n, char[] arg) {
+        List<Character> list=new ArrayList<>();
+        int index=0;
+        for(int i=0;i<A.length();i++){
+            char c=A.charAt(i);
+            if(c!='%'){
+                list.add(c);
+            }else{
+                i++;
+                if(i<A.length()&&A.charAt(i)=='s'){
+                    list.add(arg[index++]);
+                }
+            }
+        }
+        for(;index<arg.length;index++){
+            list.add(arg[index]);
+        }
+        StringBuilder s=new StringBuilder();
+        for(char c:list){
+            s.append(c);
+        }
+        return s.toString();
     }
 }
-class TClass{
+
+class TClass {
     String s1;
 
     @Override
