@@ -62,7 +62,8 @@ public class Solution {
 	}
 
 	public static void main(String[] args) {
-		System.out.println(new Solution().orangesRotting(new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}}));
-		System.out.println(new Solution().orangesRotting(new int[][]{{0}}));
+		Solution solution = new Solution();
+		System.out.println(solution.orangesRotting(new int[][]{{2, 1, 1}, {1, 1, 0}, {0, 1, 1}}));
+		System.out.println(solution.orangesRotting(new int[][]{{0}}));
 	}
 }
