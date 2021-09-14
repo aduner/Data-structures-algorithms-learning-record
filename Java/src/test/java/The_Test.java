@@ -227,6 +227,21 @@ public class The_Test {
         }
         return s.toString();
     }
+
+    @Test
+    void temp16(){
+        String a="qw12r3";
+        System.out.println(findStrInt(a));
+    }
+    private String findStrInt(String s){
+        StringBuilder str=new StringBuilder();
+        for(char c:s.toCharArray()){
+            if(c>='0' && c<='9'){
+                str.append(c);
+            }
+        }
+        return str.toString();
+    }
 }
 
 class TClass {
