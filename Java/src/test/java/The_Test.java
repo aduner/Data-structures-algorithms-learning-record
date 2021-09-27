@@ -1,5 +1,6 @@
 
 import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.util.StringUtils;
 
 import java.io.*;
 import java.sql.Timestamp;
@@ -230,17 +231,9 @@ public class The_Test {
 
     @Test
     void temp16(){
-        String a="qw12r3";
-        System.out.println(findStrInt(a));
-    }
-    private String findStrInt(String s){
-        StringBuilder str=new StringBuilder();
-        for(char c:s.toCharArray()){
-            if(c>='0' && c<='9'){
-                str.append(c);
-            }
-        }
-        return str.toString();
+        int low=123;
+        int high=321;
+        System.out.println(low + (high - low) / 2 == (low + high) / 2);
     }
 }
 
