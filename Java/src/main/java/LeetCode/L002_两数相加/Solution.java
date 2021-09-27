@@ -1,5 +1,7 @@
 package LeetCode.L002_两数相加;
 
+import Common.ListNode;
+
 public class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode likeList = null, head = null;

@@ -1,5 +1,7 @@
 package JOffer.J06_从尾到头打印链表;
 
+import Common.ListNode;
+
 public class Solution {
     public int[] reversePrint(ListNode head) {
         int len = 0;
