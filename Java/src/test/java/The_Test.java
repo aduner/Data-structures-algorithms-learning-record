@@ -133,23 +133,6 @@ public class The_Test {
         System.out.println(format.format((dateOne.before(dateTwo) ? dateTwo : dateOne).getTime()));
     }
 
-    @Test
-    void temp8() {
-        TClass tClass=new TClass();
-        tClass.setS1("1");
-        tClass.setS2("2");
-
-        String s1= tClass.getS1();
-        String s2=tClass.getS2();
-        temp9(tClass);
-        System.out.println(tClass.toString());
-    }
-
-    Map temp9(TClass tClass){
-        tClass.setS1("1111");
-        tClass.setS2("2222");
-        return new HashMap();
-    }
 
     @Test
     void temp10(){
@@ -235,34 +218,25 @@ public class The_Test {
         int high=321;
         System.out.println(low + (high - low) / 2 == (low + high) / 2);
     }
-}
-
-class TClass {
-    String s1;
-
-    @Override
-    public String toString() {
-        return "TClass{" +
-                "s1='" + s1 + '\'' +
-                ", s2='" + s2 + '\'' +
-                '}';
+    @Test
+    void temp17(){
+        System.out.println(strToInt("123456789456789"));
     }
 
-    String s2;
-
-    public String getS2() {
-        return s2;
+    public int strToInt(String str) {
+        char[] c = str.trim().toCharArray();
+        if(c.length == 0) return 0;
+        int res = 0, bndry = Integer.MAX_VALUE / 10;
+        int i = 1, sign = 1;
+        if(c[0] == '-') sign = -1;
+        else if(c[0] != '+') i = 0;
+        for(int j = i; j < c.length; j++) {
+            if(c[j] < '0' || c[j] > '9') break;
+            if(res > bndry || res == bndry && c[j] > '7')
+                return sign == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            res = res * 10 + (c[j] - '0');
+        }
+        return sign * res;
     }
 
-    public void setS2(String s2) {
-        this.s2 = s2;
-    }
-
-    public String getS1() {
-        return s1;
-    }
-
-    public void setS1(String s1) {
-        this.s1 = s1;
-    }
 }
